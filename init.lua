@@ -198,11 +198,7 @@ minetest.register_globalstep(function (dtime)
 		local s_lag = string.format("Lag: %.2f avg: %.2f peak: %.2f", news, l_avg, l_max)
 		local s_time = "Time: "..get_time()
 		
-		local s_rwt = ""
-		if advtrains and advtrains.lines and advtrains.lines.rwt then
-			s_rwt = "\nRailway Time: "..advtrains.lines.rwt.to_string(advtrains.lines.rwt.now(), true)
-		end
-		
+		local s_rwt = ""	
 		local s_star = ""
 		if enable_star then
 			s_star = star[starc+1]
